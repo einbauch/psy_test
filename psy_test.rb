@@ -1,8 +1,8 @@
-require_relative 'win_cp_fix'
-require_relative 'question.rb'
-require_relative 'result_printer.rb'
+require_relative 'lib/win_cp_fix'
+require_relative 'lib/test.rb'
+require_relative 'lib/result_printer.rb'
 
-test = Question.new
+test = Test.new
 result = ResultPrinter.new
 
 test.greet
