@@ -41,17 +41,15 @@ class Test
     end
 
     case choice
-    when "да" then @score += 2
-    when "иногда" then @score += 1
+      when "да" then @score += 2
+      when "иногда" then @score += 1
     end
 
-    @counter += 1
-
-    if @counter >= @questions.size
-      false
-    else
-      true
-    end
+    @counter += 1 
+  end
+  
+  def finished?
+    @counter >= @questions.size
   end
 
 end

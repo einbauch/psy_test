@@ -17,21 +17,15 @@ class ResultPrinter
     score = test.score
     cls
     puts "\nВАШ РЕЗУЛЬТАТ - #{score} баллов"
-
-    if score >= 30
-      puts @results[0]
-    elsif score >= 25 && score <= 29
-      puts @results[1]
-    elsif score >= 19 && score <= 24
-      puts @results[2]
-    elsif score >= 14 && score <= 18
-      puts @results[3]
-    elsif score >= 9  && score <= 13
-      puts @results[4]
-    elsif score >= 4  && score <= 8
-      puts @results[5]
-    else
-      puts @results[6]
+    
+    case score
+      when 30..32 then puts @results[0]
+      when 25..29 then puts @results[1]
+      when 19..24 then puts @results[2]
+      when 14..18 then puts @results[3]
+      when 9..13 then puts @results[4]
+      when 4..8 then puts @results[5]
+      else puts @results[6]
     end
   end
 

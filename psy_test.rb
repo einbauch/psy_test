@@ -7,7 +7,8 @@ result = ResultPrinter.new
 
 test.greet
 
-while test.ask_question do
+until test.finished? do
+  test.ask_question
 end
 
 result.print(test)
